@@ -201,6 +201,50 @@ SELECT *
 FROM Employees_Table
 WHERE FirstName LIKE '[dcb]%';
 
+-- Self join is a regular join, but the table is joined with itself --
+SELECT T1.EmployeeID, T1.FirstName, T1.LastName, T1.Position, T1.Salary
+FROM Employees_Table T1, Employees_Table T2
+WHERE T1.Salary >= 10000;
+
+SELECT A.CustomerName AS CustomerName1,
+B.CustomerName AS CustomerName2, A.City
+FROM Client_Table A, Client_Table B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
+
+-- SQL UNION Operator --
+-- UNION Operator is used to combine the result-set of two or more SELECT statements.--
+
+-- UNION SYNTAX --
+SELECT column_name(s) FROM table1
+UNION 
+SELECT column_name(s) FROM table2;
+
+
+-- UNION ALL Syntax--
+SELECT column_name(s) FROM table1
+UNION ALL
+SELECT column_name(s) FROM table2;
+
+SELECT City
+FROM Client_Table
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;
+
+SELECT OrderID, CustomerID FROM Orders_Table
+WHERE CustomerID = 1
+UNION
+SELECT EmployeeID, FirstName FROM Employees_Table
+WHERE salary >= 1500
+ORDER BY position;
+
+
+
+
+
+
 
 
 
