@@ -28,9 +28,6 @@ Quantity INT,
 OrderDate DATE
 );
 
-
-
-
 CREATE TABLE Employees_Table(
 EmployeeID INT PRIMARY KEY,
 FirstName VARCHAR (50),
@@ -45,8 +42,6 @@ VALUES
 (2, 'John', 'Smith', 'john.smith@yahoo.com', 'Kampala', 'Uganda'),
 (3, 'Mary', 'Johnson', 'mary.johnson@gmail.com', 'DareSalaam', 'Tanzania'),
 (4, 'Peter', 'Brown', 'peter.brown@gmail.com', 'Nairobi', 'Kenya');
-
-
 
 INSERT INTO Customers_Table(CustomerID, FirstName, LastName, Email, City, Country) 
 VALUES

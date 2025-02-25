@@ -221,24 +221,25 @@ SELECT column_name(s) FROM table1
 UNION 
 SELECT column_name(s) FROM table2;
 
-
--- UNION ALL Syntax--
-SELECT column_name(s) FROM table1
-UNION ALL
-SELECT column_name(s) FROM table2;
-
 SELECT City
 FROM Client_Table
 UNION
 SELECT City FROM Suppliers
 ORDER BY City;
 
-SELECT OrderID, CustomerID FROM Orders_Table
-WHERE CustomerID = 1
-UNION
-SELECT EmployeeID, FirstName FROM Employees_Table
-WHERE salary >= 1500
-ORDER BY position;
+
+-- UNION ALL Syntax--
+SELECT column_name(s) FROM table1
+UNION ALL
+SELECT column_name(s) FROM table2;
+
+SELECT City 
+FROM Client_Table
+UNION ALL
+SELECT City 
+FROM Suppliers
+ORDER BY City;
+
 
 
 
