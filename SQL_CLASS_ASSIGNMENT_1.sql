@@ -69,6 +69,7 @@ VALUES
 
 
 SELECT * FROM Employees;
+SELECT EmployeeID from Employees;
 
 -- TEST CONSTRAINTS--
 -- Attempt to insert an employee with a duplicate EmployeeID. What error do you get?--
