@@ -1,0 +1,21 @@
+CREATE DATABASE MYSQL_Practice;
+Use MYSQL_Practice;
+
+
+CREATE TABLE USER_TABLE(
+ID INT,
+Name VARCHAR(50),
+Email VARCHAR(50),
+Age INT,
+Date DATE);
+
+-- Select * from USER_TABLE;
+SELECT Name, Email from USER_TABLE; 
+
+SELECT Name, ID from USER_TABLE
+WHERE ID = 50;
+
+
+
+SELECT Name from USER_TABLE
+WHERE DATE > '2022-01-01';
